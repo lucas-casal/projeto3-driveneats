@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+  <head>
+    <meta charset="utf-8" />
+    <title>Driveneats - Lucas Casal</title>
+    <link href="reset.css" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+</head>
+
+  <body>
+    <div class = "second-plan" onclick="notReady()"></div>
+<div class="screen-container">
+    
+    <div class = "final-screen escondido" data-test="confirm-order-modal">
+      <div class="final-screen-title">Confirme seu pedido</div>
+      <div class="selected-products-container">
+      <div class="selected-products">
+        <div class="product-name dish-name"></div>
+        <div class="product-price dish-price"></div>
+      </div>
+      <div class="selected-products">
+        <div class="product-name drink-name"></div>
+        <div class="product-price drink-price"></div>
+      </div>
+      <div class="selected-products">
+        <div class="product-name dessert-name"></div>
+        <div class="product-price dessert-price"></div>
+      </div>
+      <div class="selected-products selected-total">
+        <div> TOTAL </div>
+        <div class="product-price total-value"> </div>      
+      </div>
+    </div>
+    <div class="send-order-button" data-test="confirm-order-btn">
+      Tudo certo, pode pedir!
+    </div>
+    <div class="cancel-order" onclick="notReady()" data-test="cancel-order-btn">
+      Cancelar
+    </div>
+    </div>
+    <!-- fecha o final-screen-->
+    <div class="top-bar">
+        <div class="titles">
+        DrivenEats
+        </div>
+        <div class="subtitle">
+        Sua comida em 6 minutos
+        </div>
+    </div>
+<!--fecha o top-bar-->
+    <div class="titles steps-titles-adjustment">
+    Primeiro, seu prato
+    </div>
+    <div class="menu-border">
+    <div class="menu-container">
+      <div class="option-container" data-test="dish">
+    <div class="dish-option-box" onclick="selectedDish(this); verify()">
+      
+    <img src="images/frango_yin_yang.png" class="option-image">
+        <div class="option-name" data-test="item-name">
+    Carne Yin Yang
+  </div>
+  <div class="option-info">
+    Um pouco de batata, um pouco de salada
+  </div>
+  <div class="option-price" data-test="item-price">
+     20,90
+  </div>
+  </div>
+</div>
+  <!--fecha o option-container1-->
+  <div class="option-container" data-test="dish">
+    <div class="dish-option-box" onclick="selectedDish(this); verify()">
+      <img src="images/frango_yin_yang.png" class="option-image">
+            <div class="option-name" data-test="item-name">
+        Frango Yin Yang
+      </div>
+      <div class="option-info">
+        Um pouco de batata, um pouco de salada
+      </div>
+      <div class="option-price" data-test="item-price">
+         14,90
+      </div>
+    </div>
+    </div>
+    <!--fecha o option-container2-->
+    <div class="option-container dishes-container" data-test="dish">
+    <div class="dish-option-box" onclick="selectedDish(this); verify()">
+      <img src="images/frango_yin_yang.png" class="option-image">
+            <div class="option-name" data-test="item-name">
+        Peixe Yin Yang
+      </div>
+      <div class="option-info">
+        Um pouco de batata, um pouco de salada
+      </div>
+      <div class="option-price" data-test="item-price">
+         18,90
+      </div>
+      </div>
+    </div>
+    <!--fecha o option-container3-->
+    
+  </div>
+  <!--fecha o menu-container-->
+    </div>
+    <!--fecha o menu-border1-->
+ 
+    <div class="titles steps-titles-adjustment">
+      Agora, sua bebida
+      </div>
+      <div class="menu-border">
+      <div class="menu-container">
+        <div class="option-container" data-test="drink">
+      <div class="drink-option-box" onclick="selectedDrink(this); verify()">
+        
+    <img src="images/coca-cola.png" class="option-image">
+          <div class="option-name" data-test="item-name">
+      Coquinha gelada 1
+    </div>
+    <div class="option-info">
+      Lata 350ml
+    </div>
+    <div class="option-price" data-test="item-price">
+       6,90
+    </div>
+    </div>
+    </div>
+    <!--fecha o option-container1-->
+    <div class="option-container" data-test="drink">
+      <div class="drink-option-box" onclick="selectedDrink(this); verify()">
+        
+        <img src="images/coca-cola.png" class="option-image">
+              <div class="option-name" data-test="item-name">
+          Coquinha gelada 2
+        </div>
+        <div class="option-info">
+          Lata 350ml
+        </div>
+        <div class="option-price" data-test="item-price">
+           5,90
+        </div>
+      
+          </div>
+        </div>
+      <!--fecha o option-container2-->
+      <div class="option-container" data-test="drink">
+      <div class="drink-option-box" onclick="selectedDrink(this); verify()">
+        <img src="images/coca-cola.png" class="option-image">
+              <div class="option-name" data-test="item-name">
+          Coquinha gelada 3
+        </div>
+        <div class="option-info">
+          Lata 350ml
+        </div>
+        <div class="option-price" data-test="item-price">
+           4,90
+        </div>
+      </div>
+      </div>
+      <!--fecha o option-container -->
+      
+    </div>
+    <!--fecha o menu-container-->
+      </div>
+      <!--fecha o menu-border2-->
+
+      <div class="titles steps-titles-adjustment">
+        Por fim, sua sobremesa
+        </div>
+        <div class="menu-border">
+        <div class="menu-container">
+          <div class="option-container" data-test="dessert">
+        <div class="dessert-option-box" onclick="selectedDessert(this); verify()">
+      <img src="images/pudim.png" class="option-image">
+            <div class="option-name" data-test="item-name">
+        Pudim
+      </div>
+      <div class="option-info">
+        Apenas pudim
+      </div>
+      <div class="option-price" data-test="item-price">
+         7,90
+      </div>
+      </div>
+      </div>
+      <!--fecha o option-container1-->
+      <div class="option-container" data-test="dessert">
+
+      <div class="dessert-option-box" onclick="selectedDessert(this); verify()">
+        
+          <img src="images/pudim.png" class="option-image">
+                <div class="option-name" data-test="item-name">
+            Pudim
+          </div>
+          <div class="option-info">
+            Apenas pudim
+          </div>
+          <div class="option-price" data-test="item-price">
+             7,90
+          </div>
+        </div>
+            </div>
+        <!--fecha o option-container2-->
+        <div class="option-container" data-test="dessert">
+        <div class="dessert-option-box" onclick="selectedDessert(this); verify()">
+          
+          <img src="images/pudim.png" class="option-image">
+          <div class="option-name" data-test="item-name">
+            Pudim
+          </div>
+          <div class="option-info">
+            Apenas pudim
+          </div>
+          <div class="option-price" data-test="item-price">
+             7,90
+          </div>
+        </div>
+        </div>
+        <!--fecha o option-container3-->
+        
+      </div>
+      <!--fecha o menu-container-->
+        </div>
+        <!--fecha o menu-border-->
+    
+<div class="bottom-bar">
+  <div class="button-finish-request" onclick="fechandoPedido()" data-test="order-btn">
+
+    <div class="finish-request">
+    Selecione os 3 itens para fechar o seu pedido
+    </div>
+  </div>
+</div>
+<!--fecha o bottom-bar-->
+
+
+
+
+
+
+
+  </div>
+<!--fecha o screen-container-->
+<div class="message escondido">
+  "Olá, gostaria de fazer o pedido:
+  - Prato: Frango Yin Yang
+  - Bebida: Coquinha Gelada
+  - Sobremesa: Pudim
+  Total: R$ 27,70"
+
+</div>
+<script src="logic.js"></script>
+</body>
+</html>
